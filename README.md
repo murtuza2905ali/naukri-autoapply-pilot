@@ -24,34 +24,43 @@ It’s designed to mimic human behavior while navigating the job listings and ap
 
 ---
 
-## 💻 How to Run This Project Locally
+1️⃣ Clone the Repository
+bash
 
-### 1️⃣ Clone the Repository
-
-```bash
 git clone https://github.com/murtuza2905ali/naukri-autoapply-pilot.git
 cd naukri-autoapply-pilot
-2️⃣ Set Up Virtual Environment
-bash
 
-python -m venv venv
-venv\Scripts\activate    # On Windows
-3️⃣ Install Requirements
-bash
+2️⃣ Install Requirements
+No need for requirements.txt — just run:
 
 pip install django playwright pandas openpyxl
+Then install browsers required by Playwright
 
-4️⃣ Install Playwright Browsers
 bash
 
 playwright install
-5️⃣ Run the Django Server
+
+3️⃣ Run the Django Server
 bash
 
-cd jobapply_project
 python manage.py runserver
-Now open your browser and go to:
+
+Open your browser and go to:
 📍 http://127.0.0.1:8000/
+
+💡 Alternative: Use Windows Shell Shortcut
+You can also:
+
+Shift + Right Click inside the project folder
+
+Choose "Open PowerShell window here" or "Open Terminal"
+
+Then run:
+
+bash
+
+python manage.py runserver
+Now open the browser and visit http://127.0.0.1:8000/
 
 6️⃣ Enter Login Credentials
 In the web interface:
