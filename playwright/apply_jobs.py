@@ -44,18 +44,14 @@ def test_click_on_job_card():
 
 
 
-        # ✅ Wait for redirection to homepage or user dashboard
-        page.wait_for_url("**/mnjuser/homepage", timeout=20000)
+        page.wait_for_selector("button.nI-gNb-sb__icon-wrapper", timeout=10000)
 
-        # ── CLEAR OVERLAYS ──
-        page.evaluate("""document.querySelector('.chatbot_Overlay')?.remove();
-                         document.querySelector('._chatBotContainer')?.remove();""")
+        # Scroll and force click the button
+        search_btn = page.locator("button.nI-gNb-sb__icon-wrapper")
+        search_btn.scroll_into_view_if_needed()
+        search_btn.click(force=True)
 
-        # ── SEARCH ──
-        time.sleep(4)
-        page.click("button.nI-gNb-sb__icon-wrapper")  # Click search icon
-
-        # ── Try selecting Job Type ──
+        print("✅ Search button clicked")
         job_type_selected = False
         try:
             page.click("input#jobType", timeout=3000)
