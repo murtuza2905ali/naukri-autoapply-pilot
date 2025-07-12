@@ -28,6 +28,7 @@ It’s designed to mimic human behavior while navigating the job listings and ap
 bash
 
 git clone https://github.com/murtuza2905ali/naukri-autoapply-pilot.git
+
 cd naukri-autoapply-pilot
 
 2️⃣ Install Requirements
